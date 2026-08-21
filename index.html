@@ -7,6 +7,7 @@
   <title>Queen Lea | Model Portfolio</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -23,29 +24,31 @@
       text-align: center;
       min-height: 100vh;
 
-      /* QUEEN LEA THRONE PHOTO BACKGROUND */
+      /* LEA THRONE PHOTO AS BACKGROUND */
       background:
         linear-gradient(
-          rgba(255,255,255,0.82),
-          rgba(255,248,230,0.88)
+          rgba(255,255,255,0.78),
+          rgba(255,248,230,0.84)
         ),
         url("lea-maine.png");
 
       background-size: cover;
       background-position: center top;
-      background-attachment: fixed;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       padding: 55px 20px 30px;
     }
 
     .crown {
-      font-size: 50px;
+      font-size: 52px;
       color: #c48a2f;
       margin-bottom: 5px;
     }
@@ -70,15 +73,20 @@
     }
 
 
-    /* MAIN QUEEN INTRO */
+    /* =========================
+       QUEEN LEA INTRO
+    ========================= */
 
     .queen-intro {
+
       width: min(90%, 700px);
+
       margin: 35px auto;
 
       padding: 45px 25px;
 
-      background: rgba(255,255,255,0.82);
+      background:
+        rgba(255,255,255,0.78);
 
       border:
         2px solid rgba(196,138,47,0.35);
@@ -88,33 +96,48 @@
       box-shadow:
         0 15px 40px rgba(87,62,24,0.18);
 
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(5px);
     }
 
-    .queen-intro .mini-crown {
+
+    .mini-crown {
       font-size: 45px;
       color: #c48a2f;
     }
 
+
     .queen-intro h3 {
+
       font-size: 47px;
+
       color: #c48a2f;
+
       letter-spacing: 4px;
+
       margin-top: 10px;
     }
 
+
     .queen-intro p {
+
       margin-top: 12px;
+
       font-size: 17px;
+
       letter-spacing: 3px;
+
       color: #5d4827;
     }
 
 
-    /* DIVIDER */
+    /* =========================
+       GOLD DIVIDER
+    ========================= */
 
     .divider {
+
       width: 180px;
+
       height: 2px;
 
       background:
@@ -129,9 +152,12 @@
     }
 
 
-    /* MODEL INFORMATION */
+    /* =========================
+       MODEL PROFILE
+    ========================= */
 
     .model-info {
+
       width: min(90%, 650px);
 
       margin: 30px auto;
@@ -140,7 +166,8 @@
 
       border-radius: 28px;
 
-      background: rgba(255,255,255,0.87);
+      background:
+        rgba(255,255,255,0.85);
 
       border:
         1px solid rgba(196,138,47,0.35);
@@ -148,36 +175,52 @@
       box-shadow:
         0 15px 40px rgba(90,60,20,0.16);
 
-      backdrop-filter: blur(7px);
+      backdrop-filter: blur(6px);
     }
 
+
     .model-info h2 {
+
       color: #c48a2f;
+
       font-size: 34px;
+
       letter-spacing: 4px;
+
       margin-bottom: 25px;
     }
 
+
     .stats p {
+
       font-size: 20px;
+
       margin: 12px 0;
     }
 
+
     .stats strong {
+
       color: #9d6b21;
     }
 
 
-    /* PORTFOLIO */
+    /* =========================
+       PORTFOLIO
+    ========================= */
 
     .portfolio {
+
       padding: 50px 20px 90px;
     }
 
+
     .portfolio-title {
+
       display: inline-block;
 
-      background: rgba(255,255,255,0.82);
+      background:
+        rgba(255,255,255,0.82);
 
       padding: 18px 35px;
 
@@ -185,21 +228,32 @@
 
       margin-bottom: 35px;
 
+      border:
+        1px solid rgba(196,138,47,0.25);
+
       box-shadow:
         0 8px 25px rgba(80,55,20,0.12);
     }
 
+
     .portfolio h2 {
+
       color: #c48a2f;
+
       font-size: 42px;
+
       letter-spacing: 5px;
     }
 
 
-    /* GALLERY */
+    /* =========================
+       PHOTO GALLERY
+    ========================= */
 
     .gallery {
+
       width: min(1100px, 96%);
+
       margin: auto;
 
       display: grid;
@@ -212,6 +266,7 @@
 
 
     .photo-card {
+
       background:
         rgba(255,255,255,0.90);
 
@@ -228,12 +283,12 @@
         0 14px 35px rgba(70,48,18,0.20);
 
       animation:
-        pulse 3.5s ease-in-out infinite;
+        photoPulse 3.5s ease-in-out infinite;
     }
 
 
     .photo-card:nth-child(2) {
-      animation-delay: .5s;
+      animation-delay: 0.5s;
     }
 
     .photo-card:nth-child(3) {
@@ -245,7 +300,7 @@
     }
 
 
-    @keyframes pulse {
+    @keyframes photoPulse {
 
       0%, 100% {
         transform: scale(1);
@@ -259,6 +314,7 @@
 
 
     .photo-card img {
+
       width: 100%;
 
       height: 540px;
@@ -273,16 +329,23 @@
     }
 
 
-    /* MUSIC */
+    /* =========================
+       MUSIC
+    ========================= */
 
     #youtube-player {
+
       position: fixed;
 
       width: 1px;
+
       height: 1px;
 
       left: -9999px;
+
       bottom: 0;
+
+      border: 0;
 
       opacity: 0;
 
@@ -290,9 +353,12 @@
     }
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+
       margin-top: 20px;
 
       padding: 35px 20px 55px;
@@ -308,38 +374,56 @@
     }
 
 
-    /* PHONE */
+    /* =========================
+       PHONE / MOBILE
+    ========================= */
 
     @media(max-width:700px) {
 
       body {
+
         background-attachment: scroll;
+
         background-position: center top;
       }
 
+
       header {
+
         padding-top: 35px;
       }
 
+
       header h2 {
+
         font-size: 14px;
+
         letter-spacing: 5px;
       }
 
+
       .queen-intro h3 {
+
         font-size: 37px;
       }
 
+
       .gallery {
+
         grid-template-columns: 1fr;
       }
 
+
       .photo-card img {
+
         height: auto;
+
         max-height: 700px;
       }
 
+
       .portfolio h2 {
+
         font-size: 30px;
       }
 
@@ -353,7 +437,9 @@
 <body>
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================== -->
 
   <header>
 
@@ -373,7 +459,9 @@
 
 
 
-  <!-- QUEEN INTRO -->
+  <!-- =========================
+       QUEEN LEA INTRO
+  ========================== -->
 
   <section class="queen-intro">
 
@@ -397,13 +485,16 @@
 
 
 
-  <!-- MODEL PROFILE -->
+  <!-- =========================
+       MODEL PROFILE
+  ========================== -->
 
   <section class="model-info">
 
     <h2>
       MODEL PROFILE
     </h2>
+
 
     <div class="stats">
 
@@ -412,20 +503,24 @@
         Lea
       </p>
 
+
       <p>
         <strong>Height:</strong>
         5'2"
       </p>
+
 
       <p>
         <strong>Weight:</strong>
         100 lbs
       </p>
 
+
       <p>
         <strong>Hair:</strong>
         Black
       </p>
+
 
       <p>
         <strong>Eyes:</strong>
@@ -438,9 +533,12 @@
 
 
 
-  <!-- PORTFOLIO -->
+  <!-- =========================
+       PORTFOLIO
+  ========================== -->
 
   <section class="portfolio">
+
 
     <div class="portfolio-title">
 
@@ -451,55 +549,67 @@
     </div>
 
 
+
     <div class="gallery">
 
+
+      <!-- PHOTO 2 -->
 
       <div class="photo-card">
 
         <img
           src="lea2.png"
-          alt="Queen Lea Model Photo">
+          alt="Queen Lea Model Photo 2">
 
       </div>
 
 
+
+      <!-- PHOTO 3 -->
 
       <div class="photo-card">
 
         <img
           src="lea3.png"
-          alt="Queen Lea Model Photo">
+          alt="Queen Lea Model Photo 3">
 
       </div>
 
 
+
+      <!-- PHOTO 4 -->
 
       <div class="photo-card">
 
         <img
           src="lea4.png"
-          alt="Queen Lea Model Photo">
+          alt="Queen Lea Model Photo 4">
 
       </div>
 
 
 
+      <!-- PHOTO 5 -->
+
       <div class="photo-card">
 
         <img
           src="lea5.png"
-          alt="Queen Lea Model Photo">
+          alt="Queen Lea Model Photo 5">
 
       </div>
 
 
     </div>
 
+
   </section>
 
 
 
-  <!-- MUSIC -->
+  <!-- =========================
+       AUTOMATIC MUSIC
+  ========================== -->
 
   <iframe
 
@@ -507,13 +617,17 @@
 
     src="https://www.youtube.com/embed/vNBNIce9XDM?autoplay=1&loop=1&playlist=vNBNIce9XDM&controls=0"
 
-    allow="autoplay; encrypted-media"
+    title="Queen Lea Music"
 
-    title="Queen Lea Music">
+    allow="autoplay; encrypted-media">
 
   </iframe>
 
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
