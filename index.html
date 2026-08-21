@@ -7,7 +7,6 @@
   <title>Queen Lea | Model Portfolio</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -19,15 +18,15 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #5e461f;
-      text-align: center;
       min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #5f4823;
+      text-align: center;
 
-      /* LEA THRONE PHOTO AS BACKGROUND */
+      /* LEA MAIN THRONE PHOTO AS BACKGROUND */
       background:
         linear-gradient(
-          rgba(255,255,255,0.78),
+          rgba(255,255,255,0.72),
           rgba(255,248,230,0.84)
         ),
         url("lea-maine.png");
@@ -38,221 +37,199 @@
       background-attachment: fixed;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
-      padding: 55px 20px 30px;
+      padding: 45px 20px 20px;
     }
 
     .crown {
-      font-size: 52px;
-      color: #c48a2f;
+      font-size: 48px;
+      color: #c68d2f;
       margin-bottom: 5px;
     }
 
     h1 {
-      font-size: clamp(50px, 9vw, 95px);
-      color: #c48a2f;
+      font-size: clamp(50px, 9vw, 90px);
+      color: #c68d2f;
       letter-spacing: 5px;
       text-transform: uppercase;
 
       text-shadow:
-        0 2px 5px white,
-        0 4px 15px rgba(120,85,30,0.25);
+        0 2px 4px white,
+        0 5px 15px rgba(100,70,20,0.18);
     }
 
     header h2 {
-      margin-top: 10px;
-      font-size: 20px;
-      letter-spacing: 8px;
-      color: #624a27;
+      margin-top: 8px;
+      font-size: 18px;
+      letter-spacing: 7px;
       font-weight: normal;
+      color: #634d2a;
     }
 
+    /* MAIN PHOTO */
 
-    /* =========================
-       QUEEN LEA INTRO
-    ========================= */
+    .main-photo-box {
+      width: min(90%, 580px);
+      margin: 35px auto 20px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 4px solid #e7cb91;
 
-    .queen-intro {
+      box-shadow:
+        0 16px 45px rgba(79,54,20,0.24);
 
-      width: min(90%, 700px);
+      cursor: pointer;
 
-      margin: 35px auto;
+      animation: mainPulse 3s ease-in-out infinite;
 
-      padding: 45px 25px;
+      position: relative;
+      background: white;
+    }
 
-      background:
-        rgba(255,255,255,0.78);
+    .main-photo-box img {
+      width: 100%;
+      display: block;
+    }
 
-      border:
-        2px solid rgba(196,138,47,0.35);
+    @keyframes mainPulse {
+      0%,100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.015);
+      }
+    }
+
+    .play-message {
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+
+      width: max-content;
+      max-width: 90%;
+
+      padding: 11px 20px;
 
       border-radius: 30px;
 
+      background: rgba(255,255,255,0.92);
+
+      color: #a26b18;
+
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+
       box-shadow:
-        0 15px 40px rgba(87,62,24,0.18);
-
-      backdrop-filter: blur(5px);
+        0 5px 15px rgba(0,0,0,0.15);
     }
 
+    /* NAME SECTION */
 
-    .mini-crown {
-      font-size: 45px;
-      color: #c48a2f;
-    }
-
-
-    .queen-intro h3 {
-
-      font-size: 47px;
-
-      color: #c48a2f;
-
-      letter-spacing: 4px;
-
-      margin-top: 10px;
-    }
-
-
-    .queen-intro p {
-
-      margin-top: 12px;
-
-      font-size: 17px;
-
-      letter-spacing: 3px;
-
-      color: #5d4827;
-    }
-
-
-    /* =========================
-       GOLD DIVIDER
-    ========================= */
-
-    .divider {
-
-      width: 180px;
-
-      height: 2px;
-
-      background:
-        linear-gradient(
-          to right,
-          transparent,
-          #c48a2f,
-          transparent
-        );
-
-      margin: 30px auto;
-    }
-
-
-    /* =========================
-       MODEL PROFILE
-    ========================= */
-
-    .model-info {
-
+    .name-section {
       width: min(90%, 650px);
 
       margin: 30px auto;
 
-      padding: 40px 25px;
+      padding: 30px 20px;
 
       border-radius: 28px;
 
       background:
-        rgba(255,255,255,0.85);
+        rgba(255,255,255,0.82);
 
       border:
-        1px solid rgba(196,138,47,0.35);
+        1px solid rgba(198,141,47,0.3);
 
       box-shadow:
-        0 15px 40px rgba(90,60,20,0.16);
+        0 12px 30px rgba(92,62,20,0.15);
 
       backdrop-filter: blur(6px);
     }
 
-
-    .model-info h2 {
-
-      color: #c48a2f;
-
-      font-size: 34px;
-
-      letter-spacing: 4px;
-
-      margin-bottom: 25px;
-    }
-
-
-    .stats p {
-
-      font-size: 20px;
-
-      margin: 12px 0;
-    }
-
-
-    .stats strong {
-
-      color: #9d6b21;
-    }
-
-
-    /* =========================
-       PORTFOLIO
-    ========================= */
-
-    .portfolio {
-
-      padding: 50px 20px 90px;
-    }
-
-
-    .portfolio-title {
-
-      display: inline-block;
-
-      background:
-        rgba(255,255,255,0.82);
-
-      padding: 18px 35px;
-
-      border-radius: 25px;
-
-      margin-bottom: 35px;
-
-      border:
-        1px solid rgba(196,138,47,0.25);
-
-      box-shadow:
-        0 8px 25px rgba(80,55,20,0.12);
-    }
-
-
-    .portfolio h2 {
-
-      color: #c48a2f;
-
-      font-size: 42px;
-
+    .name-section h3 {
+      font-size: 45px;
+      color: #c68d2f;
       letter-spacing: 5px;
     }
 
+    .name-section p {
+      margin-top: 10px;
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
 
-    /* =========================
-       PHOTO GALLERY
-    ========================= */
+    /* PROFILE */
+
+    .model-profile {
+      width: min(90%, 650px);
+
+      margin: 35px auto;
+
+      padding: 35px 25px;
+
+      border-radius: 28px;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      border:
+        1px solid rgba(198,141,47,0.3);
+
+      box-shadow:
+        0 12px 35px rgba(85,55,18,0.15);
+    }
+
+    .model-profile h2 {
+      color: #c68d2f;
+      font-size: 32px;
+      letter-spacing: 4px;
+      margin-bottom: 22px;
+    }
+
+    .model-profile p {
+      font-size: 19px;
+      margin: 12px 0;
+    }
+
+    .model-profile strong {
+      color: #98671e;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio {
+      padding: 45px 18px 80px;
+    }
+
+    .portfolio-title {
+      display: inline-block;
+
+      margin-bottom: 35px;
+
+      padding: 17px 32px;
+
+      border-radius: 25px;
+
+      background:
+        rgba(255,255,255,0.86);
+
+      box-shadow:
+        0 8px 25px rgba(79,55,20,0.13);
+    }
+
+    .portfolio-title h2 {
+      color: #c68d2f;
+      font-size: 38px;
+      letter-spacing: 5px;
+    }
 
     .gallery {
-
-      width: min(1100px, 96%);
+      width: min(1050px, 95%);
 
       margin: auto;
 
@@ -261,34 +238,31 @@
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap: 24px;
+      gap: 22px;
     }
 
-
     .photo-card {
-
-      background:
-        rgba(255,255,255,0.90);
-
-      padding: 10px;
+      padding: 9px;
 
       border-radius: 25px;
 
+      background:
+        rgba(255,255,255,0.93);
+
       border:
-        3px solid #e4c98f;
+        3px solid #e6cc98;
 
       overflow: hidden;
 
       box-shadow:
-        0 14px 35px rgba(70,48,18,0.20);
+        0 12px 30px rgba(68,46,16,0.18);
 
       animation:
         photoPulse 3.5s ease-in-out infinite;
     }
 
-
     .photo-card:nth-child(2) {
-      animation-delay: 0.5s;
+      animation-delay: .5s;
     }
 
     .photo-card:nth-child(3) {
@@ -299,147 +273,88 @@
       animation-delay: 1.5s;
     }
 
-
     @keyframes photoPulse {
-
-      0%, 100% {
+      0%,100% {
         transform: scale(1);
       }
 
       50% {
-        transform: scale(1.025);
+        transform: scale(1.02);
       }
-
     }
 
-
     .photo-card img {
-
       width: 100%;
-
-      height: 540px;
-
-      object-fit: contain;
-
+      height: 520px;
       display: block;
-
-      border-radius: 17px;
-
+      object-fit: contain;
+      border-radius: 18px;
       background: white;
     }
 
-
-    /* =========================
-       MUSIC
-    ========================= */
+    /* HIDDEN YOUTUBE PLAYER */
 
     #youtube-player {
-
       position: fixed;
-
-      width: 1px;
-
-      height: 1px;
-
+      width: 2px;
+      height: 2px;
       left: -9999px;
-
       bottom: 0;
-
       border: 0;
-
-      opacity: 0;
-
-      pointer-events: none;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
-
-      margin-top: 20px;
-
-      padding: 35px 20px 55px;
+      padding: 35px 20px 50px;
 
       background:
-        rgba(255,255,255,0.75);
-
-      color: #80643b;
+        rgba(255,255,255,0.78);
 
       letter-spacing: 3px;
 
-      font-size: 14px;
+      color: #765c34;
     }
 
+    /* PHONE */
 
-    /* =========================
-       PHONE / MOBILE
-    ========================= */
-
-    @media(max-width:700px) {
+    @media (max-width: 700px) {
 
       body {
-
         background-attachment: scroll;
-
         background-position: center top;
       }
 
-
       header {
-
-        padding-top: 35px;
+        padding-top: 30px;
       }
 
-
       header h2 {
-
-        font-size: 14px;
-
+        font-size: 13px;
         letter-spacing: 5px;
       }
 
-
-      .queen-intro h3 {
-
-        font-size: 37px;
-      }
-
-
       .gallery {
-
         grid-template-columns: 1fr;
       }
 
-
       .photo-card img {
-
         height: auto;
-
-        max-height: 700px;
+        max-height: 720px;
       }
 
-
-      .portfolio h2 {
-
-        font-size: 30px;
+      .portfolio-title h2 {
+        font-size: 29px;
       }
 
+      .name-section h3 {
+        font-size: 37px;
+      }
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -458,16 +373,32 @@
   </header>
 
 
+  <!-- MAIN PHOTO -->
+  <!-- CLICK THIS PHOTO TO START / PAUSE MUSIC -->
 
-  <!-- =========================
-       QUEEN LEA INTRO
-  ========================== -->
+  <section
+    class="main-photo-box"
+    onclick="toggleMusic()"
+  >
 
-  <section class="queen-intro">
+    <img
+      src="lea-maine.png"
+      alt="Queen Lea"
+    >
 
-    <div class="mini-crown">
-      ♕
+    <div
+      class="play-message"
+      id="playMessage"
+    >
+      ▶ TAP LEA TO PLAY MUSIC
     </div>
+
+  </section>
+
+
+  <!-- NAME -->
+
+  <section class="name-section">
 
     <h3>
       LEA
@@ -480,65 +411,45 @@
   </section>
 
 
+  <!-- PROFILE -->
 
-  <div class="divider"></div>
-
-
-
-  <!-- =========================
-       MODEL PROFILE
-  ========================== -->
-
-  <section class="model-info">
+  <section class="model-profile">
 
     <h2>
       MODEL PROFILE
     </h2>
 
+    <p>
+      <strong>Name:</strong>
+      Lea
+    </p>
 
-    <div class="stats">
+    <p>
+      <strong>Height:</strong>
+      5'2"
+    </p>
 
-      <p>
-        <strong>Name:</strong>
-        Lea
-      </p>
+    <p>
+      <strong>Weight:</strong>
+      100 lbs
+    </p>
 
+    <p>
+      <strong>Hair:</strong>
+      Black
+    </p>
 
-      <p>
-        <strong>Height:</strong>
-        5'2"
-      </p>
-
-
-      <p>
-        <strong>Weight:</strong>
-        100 lbs
-      </p>
-
-
-      <p>
-        <strong>Hair:</strong>
-        Black
-      </p>
-
-
-      <p>
-        <strong>Eyes:</strong>
-        Brown
-      </p>
-
-    </div>
+    <p>
+      <strong>Eyes:</strong>
+      Brown
+    </p>
 
   </section>
 
 
-
-  <!-- =========================
-       PORTFOLIO
-  ========================== -->
+  <!-- PORTFOLIO -->
 
   <section class="portfolio">
-
 
     <div class="portfolio-title">
 
@@ -549,85 +460,61 @@
     </div>
 
 
-
     <div class="gallery">
-
-
-      <!-- PHOTO 2 -->
 
       <div class="photo-card">
 
         <img
           src="lea2.png"
-          alt="Queen Lea Model Photo 2">
+          alt="Lea Model Photo 2"
+        >
 
       </div>
 
-
-
-      <!-- PHOTO 3 -->
 
       <div class="photo-card">
 
         <img
           src="lea3.png"
-          alt="Queen Lea Model Photo 3">
+          alt="Lea Model Photo 3"
+        >
 
       </div>
 
-
-
-      <!-- PHOTO 4 -->
 
       <div class="photo-card">
 
         <img
           src="lea4.png"
-          alt="Queen Lea Model Photo 4">
+          alt="Lea Model Photo 4"
+        >
 
       </div>
 
-
-
-      <!-- PHOTO 5 -->
 
       <div class="photo-card">
 
         <img
           src="lea5.png"
-          alt="Queen Lea Model Photo 5">
+          alt="Lea Model Photo 5"
+        >
 
       </div>
 
-
     </div>
-
 
   </section>
 
 
-
-  <!-- =========================
-       AUTOMATIC MUSIC
-  ========================== -->
+  <!-- YOUTUBE MUSIC -->
 
   <iframe
-
     id="youtube-player"
-
-    src="https://www.youtube.com/embed/vNBNIce9XDM?autoplay=1&loop=1&playlist=vNBNIce9XDM&controls=0"
-
+    src="https://www.youtube.com/embed/vNBNIce9XDM?enablejsapi=1&loop=1&playlist=vNBNIce9XDM&controls=0"
     title="Queen Lea Music"
+    allow="autoplay; encrypted-media"
+  ></iframe>
 
-    allow="autoplay; encrypted-media">
-
-  </iframe>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
 
   <footer>
 
@@ -636,6 +523,58 @@
   </footer>
 
 
-</body>
+  <script>
 
+    let musicPlaying = false;
+
+    function toggleMusic() {
+
+      const player =
+        document.getElementById("youtube-player");
+
+      const message =
+        document.getElementById("playMessage");
+
+
+      if (musicPlaying === false) {
+
+        player.contentWindow.postMessage(
+          JSON.stringify({
+            event: "command",
+            func: "playVideo",
+            args: []
+          }),
+          "*"
+        );
+
+        musicPlaying = true;
+
+        message.innerHTML =
+          "❚❚ TAP LEA TO PAUSE MUSIC";
+
+      }
+
+      else {
+
+        player.contentWindow.postMessage(
+          JSON.stringify({
+            event: "command",
+            func: "pauseVideo",
+            args: []
+          }),
+          "*"
+        );
+
+        musicPlaying = false;
+
+        message.innerHTML =
+          "▶ TAP LEA TO PLAY MUSIC";
+
+      }
+
+    }
+
+  </script>
+
+</body>
 </html>
