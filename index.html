@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Queen Lea | Model Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top, #ffffff 0%, #fffaf0 45%, #f6e7c7 100%);
+      color: #33220f;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 30px 15px 15px;
+    }
+
+    header h1 {
+      font-size: clamp(42px, 9vw, 85px);
+      color: #b58a3a;
+      letter-spacing: 5px;
+      text-shadow:
+        0 2px 0 #ffffff,
+        0 5px 15px rgba(181, 138, 58, 0.25);
+    }
+
+    header h2 {
+      margin-top: 5px;
+      font-size: 17px;
+      letter-spacing: 8px;
+      color: #806128;
+      font-weight: normal;
+    }
+
+    .crown {
+      font-size: 45px;
+      margin-bottom: 5px;
+    }
+
+    /* MAIN PHOTO */
+    .hero {
+      width: min(92%, 620px);
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+      border-radius: 28px;
+      border: 6px solid white;
+      box-shadow:
+        0 12px 40px rgba(130, 93, 30, 0.28),
+        0 0 0 3px #d7b86c;
+      animation: pulse 3.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 12px 40px rgba(130, 93, 30, 0.25),
+          0 0 0 3px #d7b86c;
+      }
+
+      50% {
+        transform: scale(1.015);
+        box-shadow:
+          0 18px 50px rgba(181, 138, 58, 0.4),
+          0 0 22px 6px rgba(255, 218, 128, 0.35);
+      }
+    }
+
+    .main-label {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .main-label h3 {
+      color: #b58a3a;
+      font-size: 34px;
+      letter-spacing: 3px;
+    }
+
+    .main-label p {
+      color: #806128;
+      margin-top: 8px;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #b58a3a,
+        transparent
+      );
+      margin: 30px auto;
+    }
+
+    /* MODEL INFO */
+    .model-info {
+      width: min(90%, 600px);
+      margin: auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.78);
+      padding: 28px 20px;
+      border-radius: 22px;
+      box-shadow: 0 10px 35px rgba(135, 95, 25, 0.12);
+      border: 1px solid rgba(181, 138, 58, 0.35);
+    }
+
+    .model-info h2 {
+      color: #b58a3a;
+      margin-bottom: 18px;
+      font-size: 27px;
+      letter-spacing: 3px;
+    }
+
+    .stats {
+      line-height: 2;
+      font-size: 17px;
+    }
+
+    .stats strong {
+      color: #9a722d;
+    }
+
+    /* GALLERY */
+    .portfolio-title {
+      text-align: center;
+      margin-top: 45px;
+      color: #b58a3a;
+      font-size: 35px;
+      letter-spacing: 4px;
+    }
+
+    .gallery {
+      width: min(94%, 1000px);
+      margin: 25px auto 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 8px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(119, 84, 28, 0.18);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-7px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(181, 138, 58, 0.30);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      animation: softPulse 4.5s ease-in-out infinite;
+    }
+
+    @keyframes softPulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.01);
+      }
+    }
+
+    /* QUOTE */
+    .quote {
+      width: min(88%, 700px);
+      margin: 20px auto 50px;
+      text-align: center;
+      padding: 30px 20px;
+      color: #79581e;
+      font-size: 21px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* MUSIC BUTTON */
+    .music-area {
+      text-align: center;
+      margin: 35px auto;
+    }
+
+    .music-btn {
+      border: none;
+      background: linear-gradient(135deg, #caa34d, #f3da91);
+      color: #3e2a0b;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 7px 20px rgba(181, 138, 58, 0.3);
+    }
+
+    .music-btn:hover {
+      transform: scale(1.05);
+    }
+
+    #player {
+      position: fixed;
+      width: 1px;
+      height: 1px;
+      opacity: 0.01;
+      pointer-events: none;
+      bottom: 0;
+      right: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8b6a31;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    /* PHONE */
+    @media (max-width: 650px) {
+
+      header {
+        padding-top: 25px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        width: 90%;
+      }
+
+      .photo-card {
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="crown">♛</div>
+    <h1>QUEEN LEA</h1>
+    <h2>MODEL PORTFOLIO</h2>
+  </header>
+
+  <!-- MAIN PHOTO -->
+  <section class="hero">
+    <img src="lea-main.png" alt="Queen Lea">
+  </section>
+
+  <div class="main-label">
+    <h3>LEA</h3>
+    <p>CONFIDENT • ELEGANT • ELEVATED</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MODEL INFORMATION -->
+  <section class="model-info">
+
+    <h2>MODEL PROFILE</h2>
+
+    <div class="stats">
+      <p><strong>Name:</strong> Lea</p>
+      <p><strong>Height:</strong> 5'0"</p>
+      <p><strong>Weight:</strong> 100 lbs</p>
+      <p><strong>Hair:</strong> Black</p>
+      <p><strong>Eyes:</strong> Brown</p>
+    </div>
+
+  </section>
+
+  <h2 class="portfolio-title">THE PORTFOLIO</h2>
+
+  <div class="divider"></div>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+
+    <div class="photo-card">
+      <img src="lea2.png" alt="Lea Modeling">
+    </div>
+
+    <div class="photo-card">
+      <img src="lea3.png" alt="Lea Jordan Birthday">
+    </div>
+
+    <div class="photo-card">
+      <img src="lea4.png" alt="Queen Lea Red Dress">
+    </div>
+
+    <div class="photo-card">
+      <img src="lea5.png" alt="Lea Fashion Model">
+    </div>
+
+  </section>
+
+  <section class="quote">
+    “A queen doesn't compete for attention.
+    Her presence speaks before she ever says a word.”
+  </section>
+
+  <!-- MUSIC -->
+  <div class="music-area">
+    <button class="music-btn" onclick="playMusic()">
+      ♫ PLAY QUEEN LEA'S MUSIC
+    </button>
+  </div>
+
+  <iframe
+    id="player"
+    src="https://www.youtube.com/embed/vNBNIce9XDM?enablejsapi=1&loop=1&playlist=vNBNIce9XDM"
+    title="Queen Lea Music"
+    allow="autoplay">
+  </iframe>
+
+  <footer>
+    QUEEN LEA • MODEL PORTFOLIO
+  </footer>
+
+  <script>
+    let musicPlaying = false;
+
+    function playMusic() {
+      const player = document.getElementById("player");
+      const button = document.querySelector(".music-btn");
+
+      if (!musicPlaying) {
+        player.contentWindow.postMessage(
+          '{"event":"command","func":"playVideo","args":""}',
+          '*'
+        );
+
+        button.innerHTML = "❚❚ PAUSE MUSIC";
+        musicPlaying = true;
+
+      } else {
+
+        player.contentWindow.postMessage(
+          '{"event":"command","func":"pauseVideo","args":""}',
+          '*'
+        );
+
+        button.innerHTML = "♫ PLAY QUEEN LEA'S MUSIC";
+        musicPlaying = false;
+      }
+    }
+  </script>
+
+</body>
+</html>
