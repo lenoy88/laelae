@@ -14,15 +14,15 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #5e461f;
-      text-align: center;
       min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      text-align: center;
+      color: #5e461f;
 
       background:
         linear-gradient(
-          rgba(255,255,255,0.78),
-          rgba(255,248,230,0.86)
+          rgba(255,255,255,.78),
+          rgba(255,248,230,.86)
         ),
         url("lea-maine.png");
 
@@ -45,7 +45,6 @@
       font-size: clamp(50px, 9vw, 90px);
       color: #c48a2f;
       letter-spacing: 5px;
-      text-transform: uppercase;
     }
 
     header h2 {
@@ -56,13 +55,15 @@
       color: #634d2a;
     }
 
+    /* MAIN PICTURE */
+
     .main-photo {
       width: min(90%, 600px);
       margin: 35px auto 25px;
       border-radius: 28px;
       overflow: hidden;
       border: 4px solid #e5ca91;
-      box-shadow: 0 15px 40px rgba(80,55,20,0.22);
+      box-shadow: 0 15px 40px rgba(80,55,20,.22);
       cursor: pointer;
       position: relative;
       background: white;
@@ -78,14 +79,16 @@
       bottom: 18px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255,255,255,0.93);
+      background: rgba(255,255,255,.94);
       color: #9b6a20;
       padding: 11px 20px;
       border-radius: 30px;
-      font-size: 14px;
       font-weight: bold;
+      font-size: 14px;
       white-space: nowrap;
     }
+
+    /* INFO BOXES */
 
     .name-box,
     .model-info {
@@ -93,9 +96,9 @@
       margin: 30px auto;
       padding: 32px 25px;
       border-radius: 27px;
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(196,138,47,0.3);
-      box-shadow: 0 12px 30px rgba(80,55,20,0.13);
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(196,138,47,.30);
+      box-shadow: 0 12px 30px rgba(80,55,20,.13);
     }
 
     .name-box h3 {
@@ -121,6 +124,8 @@
       margin: 11px 0;
     }
 
+    /* PORTFOLIO */
+
     .portfolio {
       padding: 45px 18px 80px;
     }
@@ -143,10 +148,10 @@
     .photo-card {
       padding: 9px;
       border-radius: 25px;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,.94);
       border: 3px solid #e6cc98;
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(68,46,16,0.18);
+      box-shadow: 0 12px 30px rgba(68,46,16,.18);
     }
 
     .photo-card img {
@@ -158,23 +163,26 @@
       background: white;
     }
 
-    #youtube-player {
+    /* YOUTUBE PLAYER IS HIDDEN */
+
+    #player-holder {
       position: fixed;
-      width: 1px;
-      height: 1px;
+      width: 2px;
+      height: 2px;
       left: -9999px;
       bottom: 0;
-      border: 0;
+      overflow: hidden;
     }
 
     footer {
       padding: 35px 20px 50px;
-      background: rgba(255,255,255,0.76);
+      background: rgba(255,255,255,.78);
       letter-spacing: 3px;
       color: #765c34;
     }
 
     @media (max-width: 700px) {
+
       body {
         background-attachment: scroll;
       }
@@ -194,12 +202,16 @@
 
   <header>
     <div class="crown">♛</div>
+
     <h1>QUEEN LEA</h1>
+
     <h2>MODEL PORTFOLIO</h2>
   </header>
 
-  <!-- CLICK MAIN PHOTO TO PLAY MUSIC -->
-  <div class="main-photo" onclick="playMusic()">
+
+  <!-- CLICK THIS PICTURE -->
+
+  <div class="main-photo" onclick="toggleMusic()">
 
     <img
       src="lea-maine.png"
@@ -212,24 +224,49 @@
 
   </div>
 
+
   <section class="name-box">
+
     <h3>LEA</h3>
-    <p>CONFIDENT • ELEGANT • ELEVATED</p>
+
+    <p>
+      CONFIDENT • ELEGANT • ELEVATED
+    </p>
+
   </section>
+
 
   <section class="model-info">
+
     <h2>MODEL PROFILE</h2>
 
-    <p><strong>Name:</strong> Lea</p>
-    <p><strong>Height:</strong> 5'2"</p>
-    <p><strong>Weight:</strong> 100 lbs</p>
-    <p><strong>Hair:</strong> Black</p>
-    <p><strong>Eyes:</strong> Brown</p>
+    <p>
+      <strong>Name:</strong> Lea
+    </p>
+
+    <p>
+      <strong>Height:</strong> 5'2"
+    </p>
+
+    <p>
+      <strong>Weight:</strong> 100 lbs
+    </p>
+
+    <p>
+      <strong>Hair:</strong> Black
+    </p>
+
+    <p>
+      <strong>Eyes:</strong> Brown
+    </p>
+
   </section>
+
 
   <section class="portfolio">
 
     <h2>THE PORTFOLIO</h2>
+
 
     <div class="gallery">
 
@@ -237,13 +274,16 @@
         <img src="lea2.png" alt="Lea Photo 2">
       </div>
 
+
       <div class="photo-card">
         <img src="lea3.png" alt="Lea Photo 3">
       </div>
 
+
       <div class="photo-card">
         <img src="lea4.png" alt="Lea Photo 4">
       </div>
+
 
       <div class="photo-card">
         <img src="lea5.png" alt="Lea Photo 5">
@@ -253,43 +293,143 @@
 
   </section>
 
+
   <!-- YOUTUBE PLAYER -->
-  <iframe
-    id="youtube-player"
-    src="https://www.youtube.com/embed/vNBNIce9XDM?enablejsapi=1&loop=1&playlist=vNBNIce9XDM&controls=0"
-    allow="autoplay; encrypted-media"
-    title="Queen Lea Music">
-  </iframe>
+
+  <div id="player-holder">
+
+    <div id="youtubePlayer"></div>
+
+  </div>
+
 
   <footer>
+
     ♛ QUEEN LEA • MODEL PORTFOLIO ♛
+
   </footer>
 
+
+  <!-- LOAD YOUTUBE API -->
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+
   <script>
-    let started = false;
 
-    function playMusic() {
+    let player;
 
-      const player =
-        document.getElementById("youtube-player");
+    let playerReady = false;
 
-      const message =
-        document.getElementById("tapMessage");
+    let musicPlaying = false;
 
-      player.contentWindow.postMessage(
-        JSON.stringify({
-          event: "command",
-          func: "playVideo",
-          args: []
-        }),
-        "*"
-      );
+    let waitingToPlay = false;
 
-      started = true;
 
-      message.innerHTML =
-        "♪ MUSIC PLAYING";
+    /* CREATE YOUTUBE PLAYER */
+
+    function onYouTubeIframeAPIReady() {
+
+      player = new YT.Player("youtubePlayer", {
+
+        width: "2",
+
+        height: "2",
+
+        videoId: "vNBNIce9XDM",
+
+        playerVars: {
+
+          autoplay: 0,
+
+          controls: 0,
+
+          loop: 1,
+
+          playlist: "vNBNIce9XDM",
+
+          playsinline: 1
+
+        },
+
+        events: {
+
+          onReady: function () {
+
+            playerReady = true;
+
+            /* If Lea was clicked while YouTube was loading */
+
+            if (waitingToPlay) {
+
+              startMusic();
+
+            }
+
+          }
+
+        }
+
+      });
+
     }
+
+
+    /* CLICK LEA */
+
+    function toggleMusic() {
+
+      if (!playerReady) {
+
+        waitingToPlay = true;
+
+        document.getElementById("tapMessage").innerHTML =
+          "♪ MUSIC LOADING...";
+
+        return;
+
+      }
+
+
+      if (musicPlaying) {
+
+        player.pauseVideo();
+
+        musicPlaying = false;
+
+        document.getElementById("tapMessage").innerHTML =
+          "▶ TAP LEA TO PLAY MUSIC";
+
+      }
+
+      else {
+
+        startMusic();
+
+      }
+
+    }
+
+
+    /* START SONG */
+
+    function startMusic() {
+
+      waitingToPlay = false;
+
+      player.unMute();
+
+      player.setVolume(100);
+
+      player.playVideo();
+
+      musicPlaying = true;
+
+      document.getElementById("tapMessage").innerHTML =
+        "♪ MUSIC PLAYING";
+
+    }
+
   </script>
 
 </body>
