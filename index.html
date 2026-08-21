@@ -13,16 +13,21 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       min-height: 100vh;
       font-family: Georgia, "Times New Roman", serif;
       text-align: center;
       color: #5e461f;
 
+      /* LEA THRONE PICTURE IN BACKGROUND */
       background:
         linear-gradient(
-          rgba(255,255,255,.78),
-          rgba(255,248,230,.86)
+          rgba(255,255,255,0.76),
+          rgba(255,248,230,0.84)
         ),
         url("lea-maine.png");
 
@@ -32,12 +37,15 @@
       background-attachment: fixed;
     }
 
+
+    /* HEADER */
+
     header {
       padding: 45px 20px 20px;
     }
 
     .crown {
-      font-size: 48px;
+      font-size: 50px;
       color: #c48a2f;
     }
 
@@ -45,6 +53,11 @@
       font-size: clamp(50px, 9vw, 90px);
       color: #c48a2f;
       letter-spacing: 5px;
+      text-transform: uppercase;
+
+      text-shadow:
+        0 2px 5px white,
+        0 5px 15px rgba(100,70,20,0.20);
     }
 
     header h2 {
@@ -55,136 +68,330 @@
       color: #634d2a;
     }
 
+
     /* MAIN PICTURE */
 
     .main-photo {
-      width: min(90%, 600px);
-      margin: 35px auto 25px;
-      border-radius: 28px;
+      width: min(88%, 600px);
+      margin: 35px auto 30px;
+
+      border-radius: 30px;
       overflow: hidden;
-      border: 4px solid #e5ca91;
-      box-shadow: 0 15px 40px rgba(80,55,20,.22);
-      cursor: pointer;
-      position: relative;
+
+      border: 5px solid #e5c277;
+
       background: white;
+
+      cursor: pointer;
+
+      position: relative;
+
+      box-shadow:
+        0 15px 40px rgba(80,55,20,0.28);
+
+      /* FAST AGGRESSIVE PULSE */
+      animation:
+        mainPulse 0.75s ease-in-out infinite;
     }
 
     .main-photo img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
-    .tap-message {
-      position: absolute;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255,255,255,.94);
-      color: #9b6a20;
-      padding: 11px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 14px;
-      white-space: nowrap;
+
+    /* MAIN PICTURE FAST PULSE */
+
+    @keyframes mainPulse {
+
+      0% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.045);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      75% {
+        transform: scale(1.045);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
-    /* INFO BOXES */
 
-    .name-box,
-    .model-info {
+    /* MUSIC MESSAGE */
+
+    .music-message {
+      position: absolute;
+
+      bottom: 20px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      background:
+        rgba(255,255,255,0.95);
+
+      color: #9b6a20;
+
+      padding: 12px 22px;
+
+      border-radius: 30px;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      white-space: nowrap;
+
+      box-shadow:
+        0 5px 18px rgba(0,0,0,0.17);
+    }
+
+
+    /* NAME BOX */
+
+    .name-box {
       width: min(90%, 650px);
-      margin: 30px auto;
+
+      margin: 35px auto;
+
       padding: 32px 25px;
-      border-radius: 27px;
-      background: rgba(255,255,255,.88);
-      border: 1px solid rgba(196,138,47,.30);
-      box-shadow: 0 12px 30px rgba(80,55,20,.13);
+
+      border-radius: 28px;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      border:
+        1px solid rgba(196,138,47,0.32);
+
+      box-shadow:
+        0 12px 30px rgba(80,55,20,0.15);
+
+      backdrop-filter: blur(5px);
     }
 
     .name-box h3 {
-      font-size: 42px;
+      font-size: 44px;
       color: #c48a2f;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
     }
 
     .name-box p {
       margin-top: 10px;
       letter-spacing: 3px;
+      font-size: 16px;
+    }
+
+
+    /* MODEL PROFILE */
+
+    .model-info {
+      width: min(90%, 650px);
+
+      margin: 30px auto;
+
+      padding: 38px 25px;
+
+      border-radius: 28px;
+
+      background:
+        rgba(255,255,255,0.90);
+
+      border:
+        1px solid rgba(196,138,47,0.32);
+
+      box-shadow:
+        0 12px 30px rgba(80,55,20,0.15);
+
+      backdrop-filter: blur(5px);
     }
 
     .model-info h2 {
       color: #c48a2f;
       font-size: 32px;
       letter-spacing: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .model-info p {
       font-size: 19px;
-      margin: 11px 0;
+      margin: 12px 0;
     }
+
+    .model-info strong {
+      color: #92651d;
+    }
+
 
     /* PORTFOLIO */
 
     .portfolio {
-      padding: 45px 18px 80px;
+      padding: 50px 18px 90px;
+    }
+
+    .portfolio-title {
+      display: inline-block;
+
+      padding: 18px 32px;
+
+      margin-bottom: 40px;
+
+      border-radius: 25px;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      border:
+        1px solid rgba(196,138,47,0.28);
     }
 
     .portfolio h2 {
       color: #c48a2f;
       font-size: 38px;
       letter-spacing: 5px;
-      margin-bottom: 35px;
     }
 
+
+    /* PICTURES */
+
     .gallery {
-      width: min(1050px, 95%);
+      width: min(1050px, 94%);
       margin: auto;
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 30px;
     }
 
     .photo-card {
       padding: 9px;
+
       border-radius: 25px;
-      background: rgba(255,255,255,.94);
-      border: 3px solid #e6cc98;
+
+      background:
+        rgba(255,255,255,0.95);
+
+      border:
+        4px solid #e6cc98;
+
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(68,46,16,.18);
+
+      box-shadow:
+        0 12px 30px rgba(68,46,16,0.20);
+
+      /* FAST PULSE */
+      animation:
+        photoPulse 0.85s ease-in-out infinite;
     }
+
+
+    /* DIFFERENT TIMING SO THEY MOVE DIFFERENTLY */
+
+    .photo-card:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .photo-card:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .photo-card:nth-child(3) {
+      animation-delay: 0.30s;
+    }
+
+    .photo-card:nth-child(4) {
+      animation-delay: 0.45s;
+    }
+
+
+    @keyframes photoPulse {
+
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.07);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
 
     .photo-card img {
       width: 100%;
+
       height: 520px;
+
       object-fit: contain;
+
       display: block;
+
       border-radius: 18px;
+
       background: white;
     }
 
-    /* YOUTUBE PLAYER IS HIDDEN */
 
-    #player-holder {
-      position: fixed;
-      width: 2px;
-      height: 2px;
-      left: -9999px;
-      bottom: 0;
+    /* YOUTUBE PLAYER */
+
+    #player-container {
+      position: absolute;
+      width: 1px;
+      height: 1px;
       overflow: hidden;
+      left: -9999px;
     }
+
+
+    /* FOOTER */
 
     footer {
       padding: 35px 20px 50px;
-      background: rgba(255,255,255,.78);
+
+      background:
+        rgba(255,255,255,0.80);
+
       letter-spacing: 3px;
+
       color: #765c34;
+
+      font-size: 14px;
     }
+
+
+    /* PHONE */
 
     @media (max-width: 700px) {
 
       body {
         background-attachment: scroll;
+      }
+
+      header {
+        padding-top: 30px;
+      }
+
+      header h2 {
+        font-size: 13px;
+        letter-spacing: 5px;
       }
 
       .gallery {
@@ -193,41 +400,77 @@
 
       .photo-card img {
         height: auto;
+        max-height: 720px;
       }
+
+      .portfolio h2 {
+        font-size: 29px;
+      }
+
+      .name-box h3 {
+        font-size: 37px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
-    <div class="crown">♛</div>
 
-    <h1>QUEEN LEA</h1>
+    <div class="crown">
+      ♛
+    </div>
 
-    <h2>MODEL PORTFOLIO</h2>
+    <h1>
+      QUEEN LEA
+    </h1>
+
+    <h2>
+      MODEL PORTFOLIO
+    </h2>
+
   </header>
 
 
-  <!-- CLICK THIS PICTURE -->
 
-  <div class="main-photo" onclick="toggleMusic()">
+  <!-- MAIN LEA PICTURE -->
+  <!-- CLICK THIS TO PLAY / PAUSE MUSIC -->
+
+  <div
+    class="main-photo"
+    id="mainPhoto"
+  >
 
     <img
       src="lea-maine.png"
       alt="Queen Lea"
     >
 
-    <div class="tap-message" id="tapMessage">
+    <div
+      class="music-message"
+      id="musicMessage"
+    >
       ▶ TAP LEA TO PLAY MUSIC
     </div>
 
   </div>
 
 
+
+  <!-- NAME -->
+
   <section class="name-box">
 
-    <h3>LEA</h3>
+    <h3>
+      LEA
+    </h3>
 
     <p>
       CONFIDENT • ELEGANT • ELEVATED
@@ -236,72 +479,117 @@
   </section>
 
 
+
+  <!-- MODEL PROFILE -->
+
   <section class="model-info">
 
-    <h2>MODEL PROFILE</h2>
+    <h2>
+      MODEL PROFILE
+    </h2>
 
     <p>
-      <strong>Name:</strong> Lea
+      <strong>Name:</strong>
+      Lea
     </p>
 
     <p>
-      <strong>Height:</strong> 5'2"
+      <strong>Height:</strong>
+      5'2"
     </p>
 
     <p>
-      <strong>Weight:</strong> 100 lbs
+      <strong>Weight:</strong>
+      100 lbs
     </p>
 
     <p>
-      <strong>Hair:</strong> Black
+      <strong>Hair:</strong>
+      Black
     </p>
 
     <p>
-      <strong>Eyes:</strong> Brown
+      <strong>Eyes:</strong>
+      Brown
     </p>
 
   </section>
 
 
+
+  <!-- PORTFOLIO -->
+
   <section class="portfolio">
 
-    <h2>THE PORTFOLIO</h2>
+    <div class="portfolio-title">
+
+      <h2>
+        THE PORTFOLIO
+      </h2>
+
+    </div>
 
 
     <div class="gallery">
 
+
       <div class="photo-card">
-        <img src="lea2.png" alt="Lea Photo 2">
+
+        <img
+          src="lea2.png"
+          alt="Lea Model Photo 2"
+        >
+
       </div>
 
 
       <div class="photo-card">
-        <img src="lea3.png" alt="Lea Photo 3">
+
+        <img
+          src="lea3.png"
+          alt="Lea Model Photo 3"
+        >
+
       </div>
 
 
       <div class="photo-card">
-        <img src="lea4.png" alt="Lea Photo 4">
+
+        <img
+          src="lea4.png"
+          alt="Lea Model Photo 4"
+        >
+
       </div>
 
 
       <div class="photo-card">
-        <img src="lea5.png" alt="Lea Photo 5">
+
+        <img
+          src="lea5.png"
+          alt="Lea Model Photo 5"
+        >
+
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- YOUTUBE PLAYER -->
 
-  <div id="player-holder">
+  <!-- HIDDEN YOUTUBE PLAYER -->
+
+  <div id="player-container">
 
     <div id="youtubePlayer"></div>
 
   </div>
 
+
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -310,7 +598,8 @@
   </footer>
 
 
-  <!-- LOAD YOUTUBE API -->
+
+  <!-- YOUTUBE API -->
 
   <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -323,99 +612,84 @@
 
     let musicPlaying = false;
 
-    let waitingToPlay = false;
+    let requestedPlay = false;
 
 
     /* CREATE YOUTUBE PLAYER */
 
     function onYouTubeIframeAPIReady() {
 
-      player = new YT.Player("youtubePlayer", {
+      player = new YT.Player(
+        "youtubePlayer",
+        {
 
-        width: "2",
+          height: "1",
 
-        height: "2",
+          width: "1",
 
-        videoId: "vNBNIce9XDM",
+          videoId: "vNBNIce9XDM",
 
-        playerVars: {
+          playerVars: {
 
-          autoplay: 0,
+            autoplay: 0,
 
-          controls: 0,
+            controls: 0,
 
-          loop: 1,
+            loop: 1,
 
-          playlist: "vNBNIce9XDM",
+            playlist:
+              "vNBNIce9XDM",
 
-          playsinline: 1
+            playsinline: 1
 
-        },
+          },
 
-        events: {
+          events: {
 
-          onReady: function () {
+            onReady:
+              function () {
 
-            playerReady = true;
+                playerReady = true;
 
-            /* If Lea was clicked while YouTube was loading */
+                if (requestedPlay) {
 
-            if (waitingToPlay) {
+                  startMusic();
 
-              startMusic();
+                }
 
-            }
+              }
 
           }
 
         }
-
-      });
+      );
 
     }
 
 
-    /* CLICK LEA */
 
-    function toggleMusic() {
+    /* START MUSIC */
+
+    function startMusic() {
 
       if (!playerReady) {
 
-        waitingToPlay = true;
+        requestedPlay = true;
 
-        document.getElementById("tapMessage").innerHTML =
-          "♪ MUSIC LOADING...";
+        document
+          .getElementById(
+            "musicMessage"
+          )
+          .textContent =
+          "♪ LOADING MUSIC...";
 
         return;
 
       }
 
 
-      if (musicPlaying) {
+      requestedPlay = false;
 
-        player.pauseVideo();
-
-        musicPlaying = false;
-
-        document.getElementById("tapMessage").innerHTML =
-          "▶ TAP LEA TO PLAY MUSIC";
-
-      }
-
-      else {
-
-        startMusic();
-
-      }
-
-    }
-
-
-    /* START SONG */
-
-    function startMusic() {
-
-      waitingToPlay = false;
 
       player.unMute();
 
@@ -423,14 +697,76 @@
 
       player.playVideo();
 
+
       musicPlaying = true;
 
-      document.getElementById("tapMessage").innerHTML =
-        "♪ MUSIC PLAYING";
+
+      document
+        .getElementById(
+          "musicMessage"
+        )
+        .textContent =
+        "♪ MUSIC PLAYING — TAP TO PAUSE";
 
     }
 
+
+
+    /* PAUSE MUSIC */
+
+    function pauseMusic() {
+
+      if (
+        player &&
+        playerReady
+      ) {
+
+        player.pauseVideo();
+
+      }
+
+
+      musicPlaying = false;
+
+
+      document
+        .getElementById(
+          "musicMessage"
+        )
+        .textContent =
+        "▶ TAP LEA TO PLAY MUSIC";
+
+    }
+
+
+
+    /* CLICK MAIN PICTURE */
+
+    document
+      .getElementById(
+        "mainPhoto"
+      )
+      .addEventListener(
+        "click",
+        function () {
+
+          if (musicPlaying) {
+
+            pauseMusic();
+
+          }
+
+          else {
+
+            startMusic();
+
+          }
+
+        }
+      );
+
   </script>
+
 
 </body>
 </html>
